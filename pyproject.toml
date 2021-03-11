@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "resume_api"
+version = "0.1.0"
+description = "API for Pax's Paper-Free Resume"
+authors = ["Margret 'Pax' Williams"]
+license = "AGPL-3.0"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.63.0"
+uvicorn = {version = "^0.13.4", extras = ["standard"]}
+
+[tool.poetry.dev-dependencies]
+requests = "^2.25.1"
+pytest = "^6.2.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
