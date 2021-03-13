@@ -1,6 +1,6 @@
 from pytest import mark
-from resume_api.config import settings
-from resume_api.github.api import GitHubAPI
+from portfolio_api.config import settings
+from portfolio_api.github.api import GitHubAPI
 
 
 class Test_GitHub_API_Integration:

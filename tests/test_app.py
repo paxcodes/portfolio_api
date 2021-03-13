@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from resume_api.main import app
+from portfolio_api.main import app
 
 client = TestClient(app)
 

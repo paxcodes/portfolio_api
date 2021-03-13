@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "resume_api"
+name = "portfolio_api"
 version = "0.1.0"
-description = "API for Pax's Paper-Free Resume"
+description = "API for Pax's Portfolio/Online Resume"
 authors = ["Margret 'Pax' Williams"]
 license = "AGPL-3.0"
 
