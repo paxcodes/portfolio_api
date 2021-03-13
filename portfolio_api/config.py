@@ -9,4 +9,4 @@ class Settings(BaseSettings):
         case_sensitive = True
 
 
-settings = Settings(_env_file=".env")
+settings = Settings(_env_file=".env", GITHUB_USERNAME="paxcodes")
