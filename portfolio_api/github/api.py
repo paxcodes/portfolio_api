@@ -1,7 +1,10 @@
 from __future__ import annotations
 
+from typing import Optional
+
 import httpx
 
+from .pr import PullRequest
 from .user import GitHubUser
 
 
@@ -29,3 +32,24 @@ class GitHubAPI:
         if response.status_code != 200:
             raise Exception(response.status_code)
         return GitHubUser(**response.json())
+
+    async def GetPullRequests(
+        self, *, author: Optional[str], merged: bool = False
+    ) -> PullRequest:
+        apiEndpoint = f"{self.BASE_URL}/search/issues"
+        query = self._PrepareSearchQuery(author, merged)
+        async with httpx.AsyncClient() as client:
+            response = await client.get(
+                apiEndpoint, auth=self._auth, params={"q": query}
+            )
+        if response.status_code != 200:
+            raise Exception(response.status_code)
+        return PullRequest(**response.json())
+
+    def _PrepareSearchQuery(self, author: Optional[str], merged: bool) -> str:
+        query = ""
+        if author:
+            query = f"author:{author}"
+        if merged:
+            query = f"{query} is:merged"
+        return query

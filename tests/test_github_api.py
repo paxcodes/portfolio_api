@@ -1,9 +1,17 @@
-from pytest import mark
 from portfolio_api.config import settings
 from portfolio_api.github.api import GitHubAPI
+from pytest import mark
 
 
 class Test_GitHub_API_Integration:
+    @mark.asyncio
+    async def test_it_can_get_merged_prs(self):
+        ghAPI = GitHubAPI()
+        actualPRs = await ghAPI.GetPullRequests(
+            author=settings.GITHUB_USERNAME, merged=True
+        )
+        assert actualPRs
+
     class Test_When_not_authenticated:
         @mark.asyncio
         async def test_it_cannot_get_my_number_of_private_repos(self):
