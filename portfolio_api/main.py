@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
+from .api_v1.api import api_router
 from .config import settings
 
 app = FastAPI(
@@ -18,3 +19,6 @@ app.add_middleware(
 @app.get("/")
 async def home():
     return {"msg": "Hello World"}
+
+
+app.include_router(api_router, prefix=settings.API_V1_STR)
