@@ -7,7 +7,7 @@
             "PyInstaller",
             "Typer"
         ],
-        "description": "Generates a report on the organization’s website, Facebook page, and SoundCloud account activity by integrating with Google Analytics and Facebook API; Data is stored in a JSON file so current week’s data can be compared with last week’s. A web form is provided for the user to enter SoundCloud data not available in their API.",
+        "description": "Automatically create and schedule newsletters in Mailchimp using their API; Newsletters contain new articles, videos, and broadcasts published by the organization (collected by parsing RSS feeds); and top posts in the Facebook page (calculated using Facebook’s API). It runs by crontab on CentOS 7 server every Friday at 1am.",
         "screenshots": [
             {
                 "src": "static/weekly-roundup/cli.png",
@@ -20,6 +20,113 @@
             {
                 "src": "static/weekly-roundup/test_b.png",
                 "alt": "More tests"
+            }
+        ]
+    },
+    {
+        "title": "Weekly Web Report Generator",
+        "builtWith": [
+            "Python",
+            "Pytest",
+            "Vue"
+        ],
+        "description": "Generates a report on the organization’s website, Facebook page, and SoundCloud account activity by integrating with Google Analytics and Facebook API; Data is stored in a JSON file so current week’s data can be compared with last week’s. A web form is provided for the user to enter SoundCloud data not available in their API.",
+        "screenshots": [
+            {
+                "src": "static/weekly-web-report/tests.png",
+                "alt": "Tests"
+            },
+            {
+                "src": "static/weekly-web-report/web.png",
+                "alt": "Web app"
+            }
+        ]
+    },
+    {
+        "title": "Store Switchover",
+        "builtWith": [
+            "Python",
+            "Pytest",
+            "PyInstaller",
+            "Typer"
+        ],
+        "description": "Automatically adds products to the `Featured Products` category and removes `expired` products on the first day of the month by integrating with the DonorDirect’s StudioEnterprise API; Built with Python (Typer, PyTest, PyInstaller) and designed to run by crontab on CentOS 7 server every first day of the month at midnight.",
+        "screenshots": [
+            {
+                "src": "static/store-switchover/help.png",
+                "alt": "CLI --help"
+            }
+        ]
+    },
+    {
+        "title": "Pepperplate Snipper",
+        "builtWith": [
+            "Python",
+            "Pytest",
+            "Selenium",
+            "Qt"
+        ],
+        "description": "The Pepperplate Snipper exports recipes in someone's Pepperplate account as JSON and/or PNG screenshots through web-scraping.",
+        "github": [
+            "paxcodes/peppsnipp"
+        ],
+        "link": "https://github.com/paxcodes/peppsnipp/releases",
+        "screenshots": [
+            {
+                "src": "static/peppsnipp/ps-frontend1.png",
+                "alt": "Initial process"
+            },
+            {
+                "src": "static/peppsnipp/ps-frontend3.png",
+                "alt": "Exporting recipes"
+            },
+            {
+                "src": "static/peppsnipp/ps-testscripts.png",
+                "alt": "Tests for the pepperplate crawler"
+            }
+        ]
+    },
+    {
+        "title": "The Baby Schedule Maker",
+        "builtWith": [
+            "Python",
+            "Pytest",
+            "Cypress",
+            "Vue"
+        ],
+        "description": "This page provides a sample nap schedule but unlike most—if not all—baby schedule generators, the time and length of naps or awake times can be adjusted",
+        "github": [
+            "paxcodes/babynaps"
+        ],
+        "link": "https://babysleep.app",
+        "screenshots": [
+            {
+                "src": "static/babysleep/home.png",
+                "alt": "Home page"
+            },
+            {
+                "src": "static/babysleep/schedule.png",
+                "alt": "Sample schedule"
+            }
+        ]
+    },
+    {
+        "title": "The Office Library",
+        "builtWith": [
+            "Laravel",
+            "PHPUnit",
+            "Vue",
+            "Cypress"
+        ],
+        "description": "An internal web app staff uses to mark log items they borrow or return in the office library. Staff are automatically reminded via email once an item has been with them for more than a month. Before the app, a physical binder or logbook was used and staff would forget to return the items and leave the organization without returning the items.",
+        "screenshots": [
+            {
+                "src": "static/office-lib/home.png",
+                "alt": "Homepage"
+            },
+            {
+                "src": "static/office-lib/search.png",
+                "alt": "Searching for items"
             }
         ]
     },
