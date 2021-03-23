@@ -1,6 +1,6 @@
 [
     {
-        "count": 5,
+        "count": 20,
         "project": "topanswers/topanswers",
         "contribIcon": [
             "JS",
@@ -12,6 +12,20 @@
         "project": "Vancouver-Datajam/project_4",
         "contribIcon": [
             "Python"
+        ]
+    },
+    {
+        "count": 3,
+        "project": "sysid/sse-starlette",
+        "contribIcon": [
+            "Python"
+        ]
+    },
+    {
+        "count": 1,
+        "project": "nativescript-vue/nativescript-vue.org",
+        "contribIcon": [
+            "Vue"
         ]
     }
 ]

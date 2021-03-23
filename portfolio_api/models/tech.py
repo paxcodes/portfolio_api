@@ -5,3 +5,4 @@ class Tech(Enum):
     PYTHON = "Python"
     JS = "JS"
     DOCKER = "Docker"
+    VUE = "Vue"
