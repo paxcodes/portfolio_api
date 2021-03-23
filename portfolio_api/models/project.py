@@ -1,5 +1,5 @@
-from typing import Dict, List, Optional, Union
-from urllib.parse import ParseResult, urlparse
+from typing import Dict, List, Optional
+from urllib.parse import urlparse
 
 from pydantic import BaseModel, validator
 
@@ -7,16 +7,15 @@ from .tech import Tech
 
 
 class Screenshot(BaseModel):
-    src: ParseResult
+    src: str
     alt: str
 
     @validator("src", pre=True)
-    def parse_link(cls, value: Union[ParseResult, str]) -> ParseResult:
-        if isinstance(value, str):
-            return urlparse(value)
-        elif isinstance(value, ParseResult):
-            return value
-        raise ValueError(value)
+    def validate_link(cls, value: str) -> str:
+        parsed_link = urlparse(value)
+        if None in [parsed_link.scheme, parsed_link.netloc, parsed_link.path]:
+            raise ValueError(value)
+        return value
 
 
 class Project(BaseModel):
@@ -25,16 +24,18 @@ class Project(BaseModel):
     description: str
     screenshots: List[Screenshot]
     github: Optional[List[str]]  # ['paxcodes/dicery_backend', 'paxcodes/dicery_app']
-    link: Optional[ParseResult]
+    link: Optional[str]
 
     @validator("screenshots", pre=True)
     def cast_to_screenshot_model(cls, value: List[Dict[str, str]]) -> List[Screenshot]:
         return [Screenshot(**screenshot) for screenshot in value]
 
     @validator("link", pre=True)
-    def parse_link(cls, value: Optional[str]) -> Optional[ParseResult]:
+    def validate_link(cls, value: Optional[str]) -> Optional[str]:
         if isinstance(value, str):
-            return urlparse(value)
-        elif isinstance(value, ParseResult) or value is None:
-            return value
-        raise ValueError(value)
+            parsed_link = urlparse(value)
+            if None in [parsed_link.scheme, parsed_link.netloc, parsed_link.path]:
+                raise ValueError(value)
+        if value is not None:
+            raise ValueError(value)
+        return value
