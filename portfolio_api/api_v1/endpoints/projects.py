@@ -1,8 +1,11 @@
+from typing import List
 from fastapi import APIRouter
+from portfolio_api.data.json import JsonDataService
+from portfolio_api.models import Project
 
 router = APIRouter()
 
 
-@router.get("/")
+@router.get("/", response_model=List[Project])
 def read_projects():
-    return {"msg": "Projects coming soon"}
+    return JsonDataService.Projects()
