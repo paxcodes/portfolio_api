@@ -10,13 +10,6 @@ class Screenshot(BaseModel):
     src: str
     alt: str
 
-    @validator("src", pre=True)
-    def validate_link(cls, value: str) -> str:
-        parsed_link = urlparse(value)
-        if None in [parsed_link.scheme, parsed_link.netloc, parsed_link.path]:
-            raise ValueError(value)
-        return value
-
 
 class Project(BaseModel):
     title: str
