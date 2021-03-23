@@ -11,6 +11,7 @@ fastapi = "^0.63.0"
 uvicorn = {version = "^0.13.4", extras = ["standard"]}
 httpx = "^0.17.0"
 pydantic = {version = "^1.8.1", extras = ["dotenv"]}
+aiofiles = "^0.6.0"
 
 [tool.poetry.dev-dependencies]
 requests = "^2.25.1"

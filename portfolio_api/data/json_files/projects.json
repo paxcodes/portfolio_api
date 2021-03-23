@@ -10,12 +10,16 @@
         "description": "Generates a report on the organization’s website, Facebook page, and SoundCloud account activity by integrating with Google Analytics and Facebook API; Data is stored in a JSON file so current week’s data can be compared with last week’s. A web form is provided for the user to enter SoundCloud data not available in their API.",
         "screenshots": [
             {
-                "src": "https://margret.pw/static/cli_2-ee723e51b623486e11169d66a5d959b1.png",
+                "src": "static/weekly-roundup/cli.png",
                 "alt": "CLI app"
             },
             {
-                "src": "https://margret.pw/static/test_a-081b8346c3d2a96231df28ecca86c213.png",
+                "src": "static/weekly-roundup/test_a.png",
                 "alt": "Tests without real HTTP calls"
+            },
+            {
+                "src": "static/weekly-roundup/test_b.png",
+                "alt": "More tests"
             }
         ]
     },
@@ -28,12 +32,12 @@
         "description": "A private chrome extension that integrates with the SoundCloud API to check whether broadcasts are properly uploaded to SoundCloud. Before this chrome extension, someone logs into SoundCloud and manually checks 30+ broadcasts one by one to make sure it has the correct permalink and title. The chrome extension turned a tedious, error-prone task into something that can be done accurately in a few seconds.",
         "screenshots": [
             {
-                "src": "https://margret.pw/static/chromeext-before-9943f9690dd085091aa1d984635e01e2.gif",
-                "alt": "CLI app"
+                "src": "static/chromeext/before.gif",
+                "alt": "Before tracks were uploaded"
             },
             {
-                "src": "https://margret.pw/static/chromeext-after-6e97d63c4ba3e622b5e88f89c95371ae.gif",
-                "alt": "Tests without real HTTP calls"
+                "src": "static/chromeext/after.gif",
+                "alt": "After tracks were uploaded"
             }
         ]
     }
