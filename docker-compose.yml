@@ -43,6 +43,7 @@ services:
       - SERVER_NAME=${DOMAIN?Variable not set}
       - SERVER_HOST=https://${DOMAIN?Variable not set}
     build:
+      context: .
       args:
         INSTALL_DEV: ${INSTALL_DEV-false}
     deploy:
