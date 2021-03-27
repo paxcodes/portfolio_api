@@ -1,5 +1,7 @@
 #! /usr/bin/env sh
 
+export $(cat .env.production | xargs)
+
 TAG=prod bash ./scripts/build.sh
 
 DOMAIN=api.margret.pw \
