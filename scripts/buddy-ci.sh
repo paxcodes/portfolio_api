@@ -1,6 +1,6 @@
 #! /usr/bin/env sh
 
-export $(cat .env.production | xargs)
+export $(cat .env.production | sed 's/#.*//g' | xargs)
 
 TAG=prod bash ./scripts/build.sh
 
