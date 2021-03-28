@@ -42,6 +42,7 @@ services:
     environment:
       - SERVER_NAME=${DOMAIN?Variable not set}
       - SERVER_HOST=https://${DOMAIN?Variable not set}
+      - MODULE_NAME=portfolio_api.main
     build:
       context: .
       args:
