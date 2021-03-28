@@ -2,9 +2,7 @@
 
 export $(cat .env.production | sed 's/#.*//g' | xargs)
 
-TAG=prod \
-STACK_NAME=api-margret-pw \
-bash ./scripts/build.sh
+TAG=prod bash ./scripts/build.sh
 
 DOMAIN=api.margret.pw \
 TRAEFIK_TAG=api.margret.pw \
