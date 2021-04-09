@@ -7,6 +7,7 @@ def test_get_projects(client: TestClient):
     actualProjects = response.json()
     expectedKeys = [
         "title",
+        "id",
         "builtWith",
         "description",
         "screenshots",

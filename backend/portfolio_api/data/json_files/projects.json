@@ -1,6 +1,7 @@
 [
     {
         "title": "Weekly Roundup Generator",
+        "id": "weekly_roundup_generator",
         "builtWith": [
             "Python",
             "Pytest",
@@ -25,6 +26,7 @@
     },
     {
         "title": "Weekly Web Report Generator",
+        "id": "weekly_web_report_generator",
         "builtWith": [
             "Python",
             "Pytest",
@@ -44,6 +46,7 @@
     },
     {
         "title": "Store Switchover",
+        "id": "store_switchover",
         "builtWith": [
             "Python",
             "Pytest",
@@ -60,6 +63,7 @@
     },
     {
         "title": "Pepperplate Snipper",
+        "id": "pepperplate_snipper",
         "builtWith": [
             "Python",
             "Pytest",
@@ -88,6 +92,7 @@
     },
     {
         "title": "The Baby Schedule Maker",
+        "id": "baby_schedule_maker",
         "builtWith": [
             "Python",
             "Pytest",
@@ -112,6 +117,7 @@
     },
     {
         "title": "The Office Library",
+        "id": "the_office_library",
         "builtWith": [
             "Laravel",
             "PHPUnit",
@@ -132,6 +138,7 @@
     },
     {
         "title": "SoundCloud Chrome Extension",
+        "id": "soundcloud_chrome_extension",
         "builtWith": [
             "JS",
             "Chrome"

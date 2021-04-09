@@ -13,6 +13,7 @@ class Screenshot(BaseModel):
 
 class Project(BaseModel):
     title: str
+    id: str
     builtWith: List[Tech]
     description: str
     screenshots: List[Screenshot]
