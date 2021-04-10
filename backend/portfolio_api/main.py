@@ -19,7 +19,7 @@ app.add_middleware(
 )
 
 
-@app.get("/")
+@app.get("/", tags=["/"])
 async def home():
     return {"msg": "Hello World"}
 
