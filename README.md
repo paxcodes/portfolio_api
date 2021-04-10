@@ -9,7 +9,7 @@
     </a>
 </p>
 
-<p align="center"><em>Over-engineering my portfolio for hands-on learning experience! Frontend deployed in Netlify; API deployed in AWS; Set up CI/CD using <a href="https://buddy.works/">buddy.works</a></em></p>
+<p align="center"><em>Over-engineering my portfolio for hands-on learning experience! Frontend deployed in Netlify; API deployed in AWS EC2 instance; Set up CI/CD using <a href="https://buddy.works/">buddy.works</a></em></p>
 
 ## Project setup
 
