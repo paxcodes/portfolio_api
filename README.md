@@ -11,3 +11,34 @@
 
 <p align="center"><em>Over-engineering my portfolio for hands-on learning experience! Frontend deployed in Netlify; API deployed in AWS; Set up CI/CD using <a href="https://buddy.works/">buddy.works</a></em></p>
 
+## Project setup
+
+1. Install [poetry](https://python-poetry.org/docs/#installation)
+2. Inside the `backend` folder:
+    - run `poetry shell` and then `poetry install`
+
+### Serve the API Locally
+
+```
+uvicorn portfolio_api.main:app --reload
+```
+
+### Run Tests
+
+```
+pytest
+```
+
+### Deploy to Production
+
+```
+git checkout main
+git push origin
+```
+
+## Roadmap
+
+1) API for administration pages
+    - Authentication and authorization
+    - CRUD operations (save data to a PostgreSQL database)
+2) (Celery) task to regularly pull GitHub data
