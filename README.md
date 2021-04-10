@@ -15,6 +15,9 @@
     <img src="./docs/openapi_docs.png" alt="OpenAPI docs" />
 </p>
 
+<p align="center">Frontend Github Repository: <a href="https://github.com/paxcodes/portfolio_v2">paxcodes/portfolio_v2</a></p>
+
+
 ## Project setup
 
 1. Install [poetry](https://python-poetry.org/docs/#installation)
