@@ -53,6 +53,7 @@ services:
         - traefik.constraint-label-stack=${TRAEFIK_TAG?Variable not set}
         - traefik.http.routers.${STACK_NAME?Variable not set}-backend-http.rule=PathPrefix(`/`) || PathPrefix(`/docs`)
         - traefik.http.services.${STACK_NAME?Variable not set}-backend.loadbalancer.server.port=80
+        - traefik.http.middlewares.${STACK_NAME?Variable not set}-backend.ratelimit.average=100
 
 networks:
   traefik-public:
