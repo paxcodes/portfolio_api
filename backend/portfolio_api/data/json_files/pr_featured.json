@@ -25,5 +25,14 @@
         "contribIcon": [
             "Python"
         ]
+    },
+    {
+        "project": "HypothesisWorks/hypothesis",
+        "issueNum": 2963,
+        "link": "https://github.com/HypothesisWorks/pull/2963",
+        "title": "Generate URL fragments",
+        "contribIcon": [
+            "Python"
+        ]
     }
 ]

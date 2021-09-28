@@ -1,5 +1,12 @@
 [
     {
+        "count": 3,
+        "project": "samuelcolvin/pydantic",
+        "contribIcon": [
+            "Python"
+        ]
+    },
+    {
         "count": 20,
         "project": "topanswers/topanswers",
         "contribIcon": [
