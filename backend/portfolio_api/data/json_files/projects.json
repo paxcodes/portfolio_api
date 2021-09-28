@@ -8,7 +8,7 @@
             "PyInstaller",
             "Typer"
         ],
-        "description": "Automatically create and schedule newsletters in Mailchimp using their API; Newsletters contain new articles, videos, and broadcasts published by the organization (collected by parsing RSS feeds); and top posts in the Facebook page (calculated using Facebook’s API). It runs by crontab on CentOS 7 server every Friday at 1am.",
+        "description": "Creates and schedules newsletters in Mailchimp using its API. Newsletters contain articles, videos, and broadcasts published by the organization during the past week and are collected by parsing RSS feeds. The generator calculates the top posts on the Facebook page included in the newsletter using Facebook’s API. It runs by crontab on a CentOS 7 server every Friday at 1 am.",
         "screenshots": [
             {
                 "src": "static/weekly-roundup/cli.png",
@@ -32,7 +32,7 @@
             "Pytest",
             "Vue"
         ],
-        "description": "Generates a report on the organization’s website, Facebook page, and SoundCloud account activity by integrating with Google Analytics and Facebook API; Data is stored in a JSON file so current week’s data can be compared with last week’s. A web form is provided for the user to enter SoundCloud data not available in their API.",
+        "description": "A web app (Python’s FastAPI + Vue.js) that pulls data from Google Analytics, Facebook, DonorDirect’s StudioEnterprise using their respective APIs; It also provides a web form to enter SoundCloud data not available in their API.",
         "screenshots": [
             {
                 "src": "static/weekly-web-report/tests.png",
